@@ -15,6 +15,8 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - Increase the degree of segmentation of homogeneous systems or processes.
 - Increase the difference between segments.
 ### Examples
+- Bridge Pattern
+- State Pattern
 - Follow Interface Segregation Principle and divide a huge interface to multiple interfaces with a dedicated responsibility
 - Component based architecture
 - Microservices architecture
@@ -68,7 +70,8 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - Merge two or more different processes into a single process.
 - Transfer activities from one process to another process
 ### Examples
-- Pattern façade
+- Facade Pattern
+- Flyweight Pattern
 - Use a host process to run multiple jobs, so we can save time launching a new process, e.g. application pools in IIS
 - Merge multiple representation of the one entity to the one physical class and keep differences by exposing different interfaces
 
@@ -78,10 +81,12 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - If you have several objects or systems delivering different functions, consider creating a new single system that could deliver these functions thus  eliminating the need for having several different systems.
 - If you have several separate different processes delivering different functions, consider creating a single process that will deliver a multiple functionality
 ### Examples
-- Strategy pattern
-- Polymorphism
-- Double Dispatching, Pattern Visitor
-- Pattern Builder
+- Abstract Factory Pattern
+- Visitor Pattern
+- Builder Pattern
+- Flyweight Pattern
+- Command Pattern
+- Iterator Pattern
 
 ## 07 NESTING
 ![](/40%20Principles/resources/07%20NESTING.png)
@@ -96,6 +101,8 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - Nested classes, functions
 - Extract method refactoring
 - Any submodules
+- Composite Pattern
+- Decorator Pattern 
 
 ## 08 COUNTERACTION
 ![](/40%20Principles/resources/08%20COUNTERACTION.png)
@@ -121,9 +128,9 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ## 10 PRIOR ACTION
 ![](/40%20Principles/resources/10%20PRIOR%20ACTION.png)
 ## Strategies and Recommendations
-o If your system or process experiences harmful influence of its supersystem, create preliminary conditions that will prevent the system from influence of those harmful factors.
-o If your system or process is going to be changed in a certain moment of time but such a change is difficult to achieve exactly when needed, perform the required change of the system/object (fully or partially) in advance.
-o Prearrange different parts of your system or process activities in such a way that they can be “assembled” right where and when it becomes necessary but not before.
+- If your system or process experiences harmful influence of its supersystem, create preliminary conditions that will prevent the system from influence of those harmful factors.
+- If your system or process is going to be changed in a certain moment of time but such a change is difficult to achieve exactly when needed, perform the required change of the system/object (fully or partially) in advance.
+- Prearrange different parts of your system or process activities in such a way that they can be “assembled” right where and when it becomes necessary but not before.
 ### Examples
 - Serverless tasks prewarm
 - Cache prewarm
@@ -181,6 +188,7 @@ o Prearrange different parts of your system or process activities in such a way 
 - Use a circular flow instead of a linear flow.
 - Use roundabout solutions in a process.
 ### Examples
+- Mediator Pattern
 - Recursive algorithms
 - Use explicit implementation of the interface if the class have a property with the same name 
 
@@ -218,6 +226,7 @@ o Prearrange different parts of your system or process activities in such a way 
 - Introduce viewing of your system or process at a different angle
 ### Examples
 - Use multidimensional array
+- Bridge Pattern: consider aggregate as the second dimension
 
 ## 18 RESONANCE (COORDINATION)
 ![](/40%20Principles/resources/18%20RESONANCE%20(COORDINATION).png)
@@ -286,7 +295,7 @@ o Prearrange different parts of your system or process activities in such a way 
 - If it is known that a negative effect can occur, consider creating the conditions that can initiate a negative feedback loop directed toward eliminating this negative effect or reducing its harmful consequences.
 - Increase the magnitude and scale of the existing feedback
 ### Examples
-- Use callbacks
+- Observer Pattern
 
 ## 24 INTERMEDIARY
 ![](/40%20Principles/resources/24%20INTERMEDIARY.png)
@@ -298,7 +307,6 @@ o Prearrange different parts of your system or process activities in such a way 
 - Introduce a new intermediary object/system, which is a modification of the first or the second object (system), if a problem relates to the interaction between the two systems. The modification should be understood in a broad sense: as a material, property, energy, or any other type of modification.
 ### Examples
 - Proxy Pattern
-- Decorator Pattern
 
 
 ## 25 SELF-SERVICE
@@ -311,7 +319,11 @@ o Prearrange different parts of your system or process activities in such a way 
 ### Examples
 - Inject IoC container directly to the class to resolve required dependencies on its own
 - Add validation logic to model itself via annotations or dedicated method
-
+- Prototype Pattern
+- Chain Of Responsibility Pattern
+- Command Pattern
+- Iterator Pattern
+- Memento Pattern
 
 ## 26 USE OF COPIES AND MODELS
 ![](/40%20Principles/resources/26%20USE%20OF%20COPIES%20AND%20MODELS.png)
@@ -324,6 +336,7 @@ o Prearrange different parts of your system or process activities in such a way 
 - Before launching a complex process, experiment with its simpler “copies”.
 ### Examples
 - Safe Copy
+- Prototype Pattern
 
 
 ## 27 CHEAP AND SHORT LIFE
@@ -343,7 +356,10 @@ o Prearrange different parts of your system or process activities in such a way 
 - Add a new subsystem to your system that will deliver the required functionality based on a new principle.
 - Check if your system, process or supersystem already has a component that meets the new required principle and use it to achieve the needed functionality.
 ### Examples
+- Use polymorphism
 - Strategy Pattern
+- Template Pattern
+- Factory Patterns: Factory Method and Abstract Factory
 
 
 ## 29 FLUIDITY
@@ -377,7 +393,7 @@ o Prearrange different parts of your system or process activities in such a way 
 - Impart certain spatial structure to your system (e.g. networks).
 - Introduce “filtering membranes” to diminish the influence of harmful factors of the environment or other system’s parts.
 ### Examples
-#TBD
+- Template Pattern
 
 
 ## 32 COLOR/VISIBILITY CHANGE
@@ -403,7 +419,7 @@ o Prearrange different parts of your system or process activities in such a way 
 - Make some parts of your system homogeneous with your supersystem.
 - Make some parts of your process, which interact with supersystem, homogeneous with the supersystem
 ### Examples
-- #TBD
+- Adapter Pattern
 
 ## 34 DISCARD AND RECOVER
 ![](resources/34%20DISCARD%20AND%20RECOVER.png)
@@ -414,6 +430,7 @@ o Prearrange different parts of your system or process activities in such a way 
 - Add the components to your system that will automatically eliminate those parts of your system which have become unnecessary.
 - Restore the consumable parts of the system during operation.
 ### Examples
+- Builder Pattern
 - Create a disposable instance in an execution scope. Dispose it at the end of processing, e.g. query builder
 - Addons
 
@@ -485,4 +502,4 @@ o Prearrange different parts of your system or process activities in such a way 
 - Link two different processes or activities.
 - Create combinations of different functions, skills, and capabilities
 ### Examples
-- Pattern Composite
+- Composite Pattern
