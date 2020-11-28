@@ -1,6 +1,6 @@
 # 40 Inventive Principles for Programmers
 
-This is an adapted and extended version of 40 TRIZ Inventive Principles originally developed by G Altshuller The titles and formulations of the principles might not coincide with the titles and formulations available in other literature about TRIZ and systematic Innovation due to the original nature of research and development performed by ICG T&C to create this document.
+This is an adapted and extended version of 40 TRIZ Inventive Principles originally developed by G Altshuller. The titles and formulations of the principles might not coincide with the titles and formulations available in other literature about TRIZ and systematic Innovation due to the original nature of research and development performed by ICG T&C to create this document.
 
 This version is based on the materials by G. Altshuller, R. Fulbright, D. Mann, K. Rea, V. Souchkov, A. Kuryan, A. Kugushev.
 
