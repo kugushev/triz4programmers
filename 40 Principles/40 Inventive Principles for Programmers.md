@@ -2,7 +2,7 @@
 
 This is an adapted and extended version of 40 TRIZ Inventive Principles originally developed by G Altshuller The titles and formulations of the principles might not coincide with the titles and formulations available in other literature about TRIZ and systematic Innovation due to the original nature of research and development performed by ICG T&C to create this document.
 
-This version has been developed by A. Kugushev and is based on the materials by G. Altshuller, R. Fulbright, D. Mann, K. Rea, V. Sushkov, A. Kuryan.
+This version is based on the materials by G. Altshuller, R. Fulbright, D. Mann, K. Rea, V. Souchkov, A. Kuryan, A. Kugushev.
 
 ## 01 SEGMENTATION
 ![](/40%20Principles/resources/01%20SEGMENTATION.png)
@@ -10,15 +10,15 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - Divide your system or object into independent parts or interconnected parts.
 - Divide your system or object into parts so that some part of it can be easily taken away when necessary.
 - Assemble your system or object from smaller segments.
-- Increase the degree of the system’s segmentation by composing the system from a number of smaller various objects or subsystems.
-- Break a process or activity to smaller segments.
+- Increase the degree of the system’s segmentation by composing the system from several smaller various objects or subsystems.
+- Break a process or activity into smaller segments.
 - Increase the degree of segmentation of homogeneous systems or processes.
 - Increase the difference between segments.
 ### Examples
 - Bridge Pattern
 - State Pattern
-- Follow Interface Segregation Principle and divide a huge interface to multiple interfaces with a dedicated responsibility
-- Component based architecture
+- Follow the Interface Segregation Principle and divide a huge interface into multiple interfaces with a dedicated responsibility
+- Component-based architecture
 - Microservices architecture
 
 ## 02 TAKING AWAY
@@ -28,7 +28,7 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - If some property of a system interferes with other properties of functions of the system, find out what part of the system is a carrier of the property and separate it from the system by creating another system or transferring the property to some other part of the system.
 - “Single out” the only necessary property of a system by creating another system which has the required property only.  
 ### Examples
-- Creating a standalone service with responsibility that is related to the negative effect
+- Creating a standalone service with the responsibility that is related to the negative effect
 - Process Spawning 
 - Creating a dedicated IoC container for a task to locate negative side effects
 - Temporary table in SQL
@@ -40,10 +40,10 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - Instead of a uniform structure of your system or an object, use a non-uniform structure of the system or the object.
 - Instead of a uniform structure of your process, use a nonuniform structure.
 - Vary in time or space the part of your process that causes problems.
-- Instead of a uniform structure of environment, use a nonuniform structure of environment.
+- Instead of a uniform structure of the environment, use a nonuniform structure of the environment.
 - If two (or more) different functions have to be performed by the same part of the system, but this causes problems, divide this part into two (or more) parts.
-- Make parts of the system and its environment function in most suitable and proper conditions for each part.
-- Make activities within a process and its environment function in most suitable and proper conditions for each activity.
+- Make parts of the system and its environment function in the most suitable and proper conditions for each part.
+- Make activities within a process and its environment function in the most suitable and proper conditions for each activity.
 ### Examples
 - Unsafe code, ASM includes
 - Allocate extra resources per some services
@@ -58,7 +58,7 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ### Examples
 - Test Pyramid
 - Dependency Inversion Principle
-- Data denormalization in relational database
+- Data denormalization in a relational database
 
 ## 05 MERGING
 ![](/40%20Principles/resources/05%20MERGING.png)
@@ -73,13 +73,13 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - Facade Pattern
 - Flyweight Pattern
 - Use a host process to run multiple jobs, so we can save time launching a new process, e.g. application pools in IIS
-- Merge multiple representation of the one entity to the one physical class and keep differences by exposing different interfaces
+- Merge multiple representations of one entity to one physical class and keep differences by exposing different interfaces
 
 ## 06 UNIVERSALITY
 ![](/40%20Principles/resources/06%20UNIVERSALITY.png)
 ### Strategies and Recommendations
-- If you have several objects or systems delivering different functions, consider creating a new single system that could deliver these functions thus  eliminating the need for having several different systems.
-- If you have several separate different processes delivering different functions, consider creating a single process that will deliver a multiple functionality
+- If you have several objects or systems delivering different functions, consider creating a new single system that could deliver these functions thus eliminating the need for having several different systems.
+- If you have several separate different processes delivering different functions, consider creating a single process that will deliver multiple functionalities
 ### Examples
 - Abstract Factory Pattern
 - Visitor Pattern
@@ -92,10 +92,10 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ![](/40%20Principles/resources/07%20NESTING.png)
 ## Strategies and Recommendations
 - Place an object or a system inside another system.
-- Increase a number of systems or objects nested.
+- Increase the number of systems or objects nested.
 - Make one system dynamically become a part of another system when necessary and then separate the systems again.
 - Introduce a new process inside an existing process.
-- Increase a number of “nested” processes.
+- Increase the number of “nested” processes.
 - Make process activities dynamically appear when needed and disappear when not needed.
 ### Examples
 - Nested classes, functions
@@ -109,7 +109,7 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ## Strategies and Recommendations
 - If a certain action by a system causes a negative effect but the action should be preserved, subject the system to a “counterforce”—a reverse action that cancels the negative effect.
 - Consider dividing a system into parts so that the undesired action that produces a negative effect, and the desired action compensate each other.
-- Change the environment of your system in such a way that the environment itself introduce such a “counter-” or “compensation” force.
+- Change the environment of your system in such a way that the environment itself introduces such a “counter-” or “compensation” force.
 - Merge two systems, which deliver opposite functions (actions), together
 ### Examples
 - Cache expiration 
@@ -119,7 +119,7 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ## 09 PRIOR ANTI-ACTION
 ![](/40%20Principles/resources/09%20PRIOR%20ANTI-ACTION.png)
 ## Strategies and Recommendations
-- If your system or object is subjected to a certain action which produces both negative and positive effects on the system or its supersystem, consider subjecting the system to an antipodal (inverse) action beforehand, so that it will compensate or eliminate the negative effect when the negative effect occurs.
+- If your system or object is subjected to a certain action that produces both negative and positive effects on the system or its supersystem, consider subjecting the system to an antipodal (inverse) action beforehand, so that it will compensate or eliminate the negative effect when the negative effect occurs.
 ### Examples
 - Reboot of the server at the begging of the day
 - Cleanup all possible side effects in tests setup
@@ -128,14 +128,14 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ## 10 PRIOR ACTION
 ![](/40%20Principles/resources/10%20PRIOR%20ACTION.png)
 ## Strategies and Recommendations
-- If your system or process experiences harmful influence of its supersystem, create preliminary conditions that will prevent the system from influence of those harmful factors.
-- If your system or process is going to be changed in a certain moment of time but such a change is difficult to achieve exactly when needed, perform the required change of the system/object (fully or partially) in advance.
+- If your system or process experiences the harmful influence of its supersystem, create preliminary conditions that will prevent the system from the influence of those harmful factors.
+- If your system or process is going to be changed in a certain moment but such a change is difficult to achieve exactly when needed, perform the required change of the system/object (fully or partially) in advance.
 - Prearrange different parts of your system or process activities in such a way that they can be “assembled” right where and when it becomes necessary but not before.
 ### Examples
 - Serverless tasks prewarm
 - Cache prewarm
 - Prefetch resources
-- Server Side Rendering
+- Server-Side Rendering
 - Denormalization
 
 ## 11 BEFOREHAND CUSHIONING
@@ -153,15 +153,16 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ## 12 TENSION REMOVAL
 ![](/40%20Principles/resources/12%20TENSION%20REMOVAL.png)
 ## Strategies and Recommendations
-- Create conditions to eliminate or compensate possible tension that occur or may occur within a system or between a system and its supersystem.
-- Create conditions to eliminate or compensate possible tension that occur or may occur within a process or between a process and its supersystem.
+- Create conditions to eliminate or compensate possible tension that occurs or may occur within a system or between a system and its supersystem.
+- Create conditions to eliminate or compensate possible tension that occurs or may occur within a processor between a process and its supersystem.
 - Integrate different objects or systems to remove tension.
 - Introduce a new object or a process activity to decrease possible tension.
 - Eliminate or replace an object or process activity that creates tension.
-- Break a process to smaller steps to remove possible tension
+- Break a process into smaller steps to remove possible tension
 ### Examples
-#TBD
-
+- Load Balancer: internal and external
+- Use tasks queue to avoid creating too many threads for high load tasks
+- Autoscaling
 
 ## 13 OTHER WAY ROUND
 ![](/40%20Principles/resources/13%20OTHER%20WAY%20ROUND.png)
@@ -190,20 +191,20 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ### Examples
 - Mediator Pattern
 - Recursive algorithms
-- Use explicit implementation of the interface if the class have a property with the same name 
+- Use an explicit implementation of the interface if the class have a property with the same name 
 
 
 ## 15 DYNAMIZATION
 ![](resources/15%20DYNAMIZATION.png)
 ### Strategies and Recommendations
 - If your system is static and immobile, make it dynamic and movable.
-- Divide your system into the parts capable of moving relatively to each other.
+- Divide your system into the parts capable of moving relative to each other.
 - Increase the degree of free motion within your system.
-- Make your object or its nearest supersystem dynamically change and adapt in accordance with the required conditions at each stage of operation.
+- Make your object or its nearest supersystem dynamically change and adapt by the required conditions at each stage of operation.
 - Make the structure of your process more dynamic.
-- Increase the degree of dynamics of those process activities that experience negative influence of supersystem or which performance has to be increased.
+- Increase the degree of dynamics of those process activities that experience the negative influence of supersystem or which performance has to be increased.
 ### Examples
-- Use reflection any convention based utilities
+- Use reflection any convention-based utilities
 - Code Generation 
 - Dynamic Proxies
 
@@ -214,18 +215,18 @@ This version has been developed by A. Kugushev and is based on the materials by 
   - How to make or deliver slightly less and then achieve the required effect.
   - Make or deliver slightly more to achieve the required effect.
 ### Examples
-#TBD
+- Redundancy: allocate slightly more resources for critical tasks
 
 ## 17 ANOTHER DIMENSION
 ![](/40%20Principles/resources/17%20ANOTHER%20DIMENSION.png)
 ## Strategies and Recommendations
 - Use other dimensions, in addition to the already used ones, in your system or your process.
-- Introduce a new dimension to your system, process, or their supersystem.
+- Introduce a new dimension to your system, process, or supersystem.
 - Use a multi-layered arrangement instead of a single-layer one for a system or a process.
 - Tilt or reorient the system in space.
 - Introduce viewing of your system or process at a different angle
 ### Examples
-- Use multidimensional array
+- Use a multidimensional array
 - Bridge Pattern: consider aggregate as the second dimension
 
 ## 18 RESONANCE (COORDINATION)
@@ -237,8 +238,7 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - Match intervals of actions produced by two systems or processes.
 - Match in space or in shape two systems that interact with each other
 ### Examples
-#TBD
-
+- Use Barrier synchronization primitive to match parallel tasks processing
 
 ## 19 PERIODIC ACTION
 ![](resources/19%20PERIODIC%20ACTION.png)
@@ -248,10 +248,9 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - Dynamically vary periodicity of process actions according to the operating conditions or changes in the system or supersystem.
 - Use the available pauses between process actions to perform some other useful process action(s).
 ### Examples
-- Use timer to run periodic tasks
+- Use a timer to run periodic tasks
 - Run integration tests every night
 - Regular pinging to prevent the system from switching to the “sleep” mode
-
 
 ## 20 ACTION CONTINUITY
 ![](resources/20%20ACTION%20CONTINUITY.png)
@@ -261,7 +260,7 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - If it is not possible to avoid idle pauses in your process, consider filling them with some other positive process activities.
 ### Examples
 - Hadoop style: assign disposable tasks on servers with no load
-- Return multiple result sets from stored procedure if it's required
+- Return multiple result sets from the stored procedure if it's required
 - Data packing: keep similar from usage perspective data close to each other to reduce extra calls, e.g. asset packing, textures packing, etc.
 - Context pattern: keep all scope data in one class to save the user from writing extra accessor code
 
@@ -271,7 +270,7 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ### Strategies and Recommendations
 - If your system/object is subjected to harmful or hazardous actions within some process, perform the required process at a very high speed.
 - If your process experiences harmful effects caused by the environment, conduct the process at a high speed.
-- If it is difficult to perform some change of your system due to emergence of negative effects during the process of change, perform the required change at a very high speed.
+- If it is difficult to perform some change of your system due to the emergence of negative effects during the process of change, perform the required change at a very high speed.
 - Increase the speed of the process that causes harmful effects.
 - Locate the activity within a process that might cause a negative effect and conduct this activity at a high speed.
 ### Examples
@@ -281,17 +280,17 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ## 22 BLESSING IN DISGUISE
 ![](/40%20Principles/resources/22%20BLESSING%20IN%20DISGUISE.png)
 ## Strategies and Recommendations
-- Use harmful factors or negative effects that arise in your system, your process or their supersystem to achieve positive results.
+- Use harmful factors or negative effects that arise in your system, your process, or their supersystem to achieve positive results.
 - Eliminate a harmful factor by adding it to another harmful factor.
 - Amplify the harmful factor to such a degree that it would stop bringing harm to your system or its supersystem.
 ### Examples
-#TBD
+- In-Memory Data Grid: instead of deleting data from memory after finishing a request, save it for further requests
 
 ## 23 FEEDBACK
 ![](/40%20Principles/resources/23%20FEEDBACK.png)
 ## Strategies and Recommendations
 - Integrate feedback into your system or between your system and its supersystem.
-- If feedback is available but is not effective enough, consider making it dynamic by varying the feedback components and structure in accordance with the operating conditions.
+- If feedback is available but is not effective enough, consider making it dynamic by varying the feedback components and structure by the operating conditions.
 - If it is known that a negative effect can occur, consider creating the conditions that can initiate a negative feedback loop directed toward eliminating this negative effect or reducing its harmful consequences.
 - Increase the magnitude and scale of the existing feedback
 ### Examples
@@ -329,7 +328,7 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ![](/40%20Principles/resources/26%20USE%20OF%20COPIES%20AND%20MODELS.png)
 ## Strategies and Recommendations
 - If you need to undertake certain actions that may damage a fragile or expensive system/object, use its simpler and cheaper copy.
-- If you need to undertake certain actions with respect to unavailable, complex, expensive, or dangerous object, use its copy instead.
+- If you need to undertake certain actions for an unavailable, complex, expensive, or dangerous object, use its copy instead.
 - If the required process is too complex and risky, use a simplified version of the process to run experiments.
 - Instead of a real physical system/object, use their “virtual” copies (images, holograms).
 - Use virtual models of your systems.
@@ -342,8 +341,8 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ## 27 CHEAP AND SHORT LIFE
 ![](/40%20Principles/resources/27%20CHEAP%20AND%20SHORT%20LIFE.png)
 ## Strategies and Recommendations
-- Replace an expensive object/system with a number of cheaper ones.
-- Instead of a long, continuous, and expensive process, use a number of short-term inexpensive activities.
+- Replace an expensive object/system with several cheaper ones.
+- Instead of a long, continuous, and expensive process, use several short-term inexpensive activities.
 ### Examples
 - Temporary tables
 
@@ -351,10 +350,10 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ## 28 PRINCIPLE REPLACEMENT
 ![](/40%20Principles/resources/28%20PRINCIPLE%20REPLACEMENT.png)
 ## Strategies and Recommendations
-- If a system or some its part cannot deliver its function with the required degree of performance or accuracy, consider replacing the system or its part with another one based on a different principle which is capable of delivering the required function or performance.
-- Sometimes, in business systems it is sufficient to replace a basic operating principle behind the existing system part or a process activity it delivers without replacing that part.
+- If a system or some its part cannot deliver its function with the required degree of performance or accuracy, consider replacing the system or its part with another one based on a different principle that is capable of delivering the required function or performance.
+- Sometimes, in business systems, it is sufficient to replace a basic operating principle behind the existing system part or a processing activity it delivers without replacing that part.
 - Add a new subsystem to your system that will deliver the required functionality based on a new principle.
-- Check if your system, process or supersystem already has a component that meets the new required principle and use it to achieve the needed functionality.
+- Check if your system, process, or supersystem already has a component that meets the new required principle and use it to achieve the needed functionality.
 ### Examples
 - Use polymorphism
 - Strategy Pattern
@@ -379,7 +378,7 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - Use “thin layers” to isolate a system or its part from the supersystem.
 - Instead of impairing a feature to the whole system, impair the feature to its interface layer only.
 - Use flexible thin layers as a “coating” to add the required functions or properties to your objects or system.
-- Instead of complex and massive three-dimensional physical structures use flexible shells and thin structures that can be hollow inside.
+- Instead of complex and massive three-dimensional physical structures using flexible shells and thin structures that can be hollow inside.
 - Introduce “thin barriers” to separate between process activities.
 ### Examples
 - Default Interface Methods / Traits
@@ -390,8 +389,8 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ## Strategies and Recommendations
 - Make your system “porous” by introducing “holes”.
 - If the system is porous, fill the pores with other parts to deliver different functions or to achieve the desired results.
-- Impart certain spatial structure to your system (e.g. networks).
-- Introduce “filtering membranes” to diminish the influence of harmful factors of the environment or other system’s parts.
+- Impart certain spatial structures to your system (e.g. networks).
+- Introduce “filtering membranes” to diminish the influence of harmful factors on the environment or other system’s parts.
 ### Examples
 - Template Pattern
 
@@ -400,13 +399,13 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ![](resources/32%20COLOR,%20VISIBILITY%20CHANGE.png)
 ### Strategies and Recommendations
 - Change the visibility degree of different parts of your system respectively to other system parts or the supersystem
-- Change color of an object/system, its part, or environment
+- Change the color of an object/system, its part, or environment
 - Use different colors to highlight different parts or different functions
-- Change transparency of a system/ object, its part or environment
-- Make your process or its part as transparent as possible
+- Change the transparency of a system/ object, or environment
+- Make your process as transparent as possible
 - Highlight the distinguishing property of your object/system/process
 ### Examples
-- Encapsulation of implementation behind a high level interface
+- Encapsulation of implementation behind a high-level interface
 - Data export/import from one format into another
 - Change of data type (float to integer, datatime to smalldatatime, numeric to financial)
 - Change layer of entity: move from domain to DAL to allow adjusting requests to DB
@@ -414,8 +413,8 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ## 33 HOMOGENITY
 ![](resources/33%20HOMOGENITY.png)
 ### Strategies and Recommendations
-- Impair the interacting objects or parts of the system the same structure with similar or identical properties.
-- Compose your system from a number of homogeneous objects.
+- Impair the interacting objects or parts of the system with the same structure with similar or identical properties.
+- Compose your system from several homogeneous objects.
 - Make some parts of your system homogeneous with your supersystem.
 - Make some parts of your process, which interact with supersystem, homogeneous with the supersystem
 ### Examples
@@ -424,9 +423,9 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ## 34 DISCARD AND RECOVER
 ![](resources/34%20DISCARD%20AND%20RECOVER.png)
 ### Strategies and Recommendations
-- If your system has to include some part that only operates at a certain moment of time, consider introducing this part only when necessary and then remove it.
-- Consider if an activity is needed each time when a process runs. If not, make this activity be included into the process only when needed.
-- If some part of the system has fulfilled its function and becomes unnecessary or produces negative effect, eliminate or modify it so that it will not produce any negative effect.
+- If your system has to include some part that only operates at a certain moment, considers introducing this part only when necessary and then remove it.
+- Consider if an activity is needed each time when a process runs. If not, make this activity be included in the process only when needed.
+- If some part of the system has fulfilled its function and becomes unnecessary or produces a negative effect, eliminate or modify it so that it will not produce any negative effect.
 - Add the components to your system that will automatically eliminate those parts of your system which have become unnecessary.
 - Restore the consumable parts of the system during operation.
 ### Examples
@@ -438,7 +437,7 @@ This version has been developed by A. Kugushev and is based on the materials by 
 ![](/40%20Principles/resources/35%20PARAMETER%20CHANGE.png)
 ## Strategies and Recommendations
 - Vary parameters of your system adaptively.
-- Instead of developing a new expensive system or a process, find a resource that is already available and can serve as partially developed object/process.
+- Instead of developing a new expensive system or a process, find a resource that is already available and can serve as a partially developed object/process.
 - Change the degree of flexibility of a system.
 - Change your system’s or object’s physical state.
 - Instead of expensive solid objects, use virtual copies, models, cheap objects, and vice versa.
@@ -447,16 +446,18 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - Change visual parameters.
 - Change other sensory parameters.
 ### Examples
-#TBD
+- Try to adjust the framework/platform/OS parameter to achieve the result
+- Use and configure a library instead of implementing the required functionality on your own
+- Configure DB to support tricky cases instead of "hacking" data on the backend
 
 ## 36 PARADIGM SHIFT
 ![](/40%20Principles/resources/36%20PARADIGM%20SHIFT.png)
 ## Strategies and Recommendations
-- Use the phenomena occurring at macroscale to shift the paradigms within your system.
+- Use the phenomena occurring at the macroscale to shift the paradigms within your system.
 - Use the external “push” factors to achieve the necessary changes in your system or process.
 - Create the internal “push” factors to achieve necessary changes in your system or process.
 ### Examples
-- Try to use Functional Programming/OOP/Component Based Architecture/Data Oriented Design
+- Try to use Functional Programming/OOP/Component-Based Architecture/Data-Oriented Design
 
 
 ## 37 RELATIVE CHANGE
@@ -467,19 +468,17 @@ This version has been developed by A. Kugushev and is based on the materials by 
 - Merge two components of your system with similar parameters to achieve synergy.
 - Use ongoing changes in the supersystem to achieve positive effects or modify your system/process.
 ### Examples
-- Seed database by data from integration tests of another application (which is responsible for filling the database "on live")
-- #TBD
+- Seed database by data from integration tests of another application (which is responsible for filling the database "on life")
 
 ## 38 ENRICHED ENVIRONMENT
 ![](/40%20Principles/resources/38%20ENRICHED%20ENVIRONMENT.png)
 ## Strategies and Recommendations
 - Conduct required processes or activities within the “enriched” environments.
 - Create an “enriched” environment for your system by bringing such component(s) to the environment that will boost your system’s performance or help achieve the desired effects.
-- Modify the existing components of your system’s environment in a such a way that this will boost your system’s performance or help achieve the desired effects.
+- Modify the existing components of your system’s environment in such a way that this will boost your system’s performance or help achieve the desired effects.
 ### Examples
 - Extra containers limits
 - Force mode in clouds
-
 
 ## 39 INERT ENVIRONMENT
 ![](/40%20Principles/resources/39%20INERT%20ENVIRONMENT.png)
